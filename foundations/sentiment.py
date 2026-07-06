@@ -17,5 +17,5 @@ class Solution(nn.Module):
 
         # Return a B, 1 tensor and round to 4 decimal places
         emb=self.embedding(x)
-        output=self.sigmoid(self.lr(emb.mean(axis=1)))
-        return output
+        output=self.sigmoid(self.lr(emb.mean(dim=1)))
+        return torch.round(output*10000)/10000
