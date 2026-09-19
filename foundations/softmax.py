@@ -10,6 +10,5 @@ class Solution:
         # return np.round(your_answer, 4)
         
         z_exp=np.exp(z-np.max(z))
-        z_exp=z_exp
         z_exp_sum=np.sum(z_exp)
         return np.round(z_exp/z_exp_sum,4)
